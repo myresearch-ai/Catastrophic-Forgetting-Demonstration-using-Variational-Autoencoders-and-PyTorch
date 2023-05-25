@@ -8,14 +8,24 @@ Catastrophic forgetting, also known as catastrophic interference, is a phenomeno
 
 In this repository, we demonstrate catastrophic forgetting by training a VAE first on the MNIST dataset, and subsequently on the FashionMNIST dataset. We observe that as the VAE learns to generate images of clothing items (FashionMNIST), it starts to forget how to generate images of handwritten digits (MNIST).
 
-## Repository Structure
+Repository Structure
 
-The repository contains the following files:
+The repository is structured as follows:
 
-- `VAE.py`: This file contains the definition of the Variational Autoencoder class, the loss function, and the training and evaluation functions.
-- `main.py`: This script imports the VAE, trains it on the MNIST and FashionMNIST datasets, and saves the model weights.
-- `plot.py`: This script plots the recorded losses to visually demonstrate the catastrophic forgetting.
-- `requirements.txt`: This file lists the Python dependencies required to run the code.
+	•	VAE.py: This file contains the architecture of the Variational Autoencoder.
+	•	loss.py: This file defines the loss function used for training the VAE.
+	•	train.py: This script contains the function for training the VAE model.
+	•	plot.py: This script contains the function for plotting the reconstruction images.
+	•	main.py: This is the main script where everything is tied together, performing the experiment.
+	•	requirements.txt: This file lists the Python dependencies required to run the code.
+
+How to Run
+
+To run the experiment, simply execute the main.py script:
+
+python main.py
+
+This will automatically download the MNIST and FashionMNIST datasets, train the VAE model on both, and save the reconstruction plots. Please ensure you have all necessary dependencies installed (i.e., PyTorch and torchvision).
 
 ## Requirements
 
